@@ -132,7 +132,7 @@
       <h2>Загрузите файлы реестра (Excel или JSON)</h2>
       <input type="file" id="fileInput" multiple accept=".xlsx,.xls,.json,.csv">
       <button onclick="loadFiles()">ЗАГРУЗИТЬ ФАЙЛЫ</button>
-      <div class="stats" id="status">Готов к загрузке. Перетащите сюда файлы из реестра №29</div>
+      <div class="stats" id="status">Автозагрузка с GitHub...</div>
     </div>
 
     <div class="card">
@@ -148,7 +148,6 @@
         <option value="Генерик">Только генерики</option>
         <option value="Оригинал">Только оригиналы</option>
       </select>
-      <!-- Новый фильтр по группам — заполняется автоматически после загрузки -->
       <select id="filterGroup" onchange="search()">
         <option value="">Все терапевтические группы</option>
       </select>
@@ -170,13 +169,81 @@
         <tbody id="results"></tbody>
       </table>
     </div>
-
   </div>
 
   <script>
     let medsDatabase = [];
     const originals = ["Сумамед", "Норваск", "Конкор", "Лозап", "Глюкофаж", "Козаар", "Омез", "Лосек", "Роцефин", "Аугментин", "Зиннат", "Клацид", "Фромилид", "Панадол", "Нурофен", "Энап", "Престариум", "Крестор", "Вальсакор", "Диован", "Тритаце"];
 
+    // === АВТОЗАГРУЗКА С GITHUB ===
+    window.addEventListener('load', function () {
+      if (medsDatabase.length > 0) return;
+
+      document.getElementById('status').innerHTML = "Автозагрузка реестра №29 с GitHub...";
+
+      const username = "uz-itlife";
+      const repo = "uzmed";
+      const baseRaw = `https://raw.githubusercontent.com/${username}/${repo}/main/data/`;
+
+      const filesToLoad = [
+        "1. Заруб.лек.ср..xls",
+        "2. Отеч.лек...xls",
+        // "3. Заруб.лек.ср..json",
+        // "4. Отеч.лек...json",
+        
+      ];
+
+      let loaded = 0;
+
+      filesToLoad.forEach(fileName => {
+        const url = baseRaw + encodeURIComponent(fileName);
+
+        fetch(url)
+          .then(r => {
+            if (!r.ok) throw new Error("404");
+            return r.blob();
+          })
+          .then(blob => {
+            const file = new File([blob], fileName);
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+              try {
+                const workbook = XLSX.read(e.target.result, {
+                  type: 'binary',
+                  codepage: 1251  // ГЛАВНОЕ: правильная кодировка!
+                });
+
+                workbook.SheetNames.forEach(sheet => {
+                  const rows = XLSX.utils.sheet_to_json(workbook.Sheets[sheet], { defval: "" });
+                  processRows(rows);
+                });
+              } catch (err) {
+                console.error("Ошибка чтения:", fileName, err);
+              }
+
+              if (++loaded === filesToLoad.length) {
+                finishLoading();
+              }
+            };
+
+            reader.readAsBinaryString(file);
+          })
+          .catch(() => {
+            if (++loaded === filesToLoad.length) {
+              document.getElementById('status').innerHTML = "Ошибка загрузки. Загрузите файлы вручную.";
+            }
+          });
+      });
+    });
+
+    function finishLoading() {
+      document.getElementById('status').innerHTML = `<strong>ГОТОВО! Загружено ${medsDatabase.length} препаратов</strong>`;
+      fillGroupFilter();
+      search();
+    }
+
+    // === РУЧНАЯ ЗАГРУЗКА ===
     function loadFiles() {
       const files = document.getElementById('fileInput').files;
       if (files.length === 0) return alert("Выберите файл(ы)!");
@@ -190,7 +257,7 @@
           reader.readAsText(file);
         } else {
           reader.onload = e => {
-            const wb = XLSX.read(e.target.result, { type: 'binary' });
+            const wb = XLSX.read(e.target.result, { type: 'binary', codepage: 1251 });
             wb.SheetNames.forEach(sheet => {
               const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheet], { defval: "" });
               processRows(rows);
@@ -204,17 +271,11 @@
 
     function checkDone(done, total) {
       document.getElementById('status').innerHTML = `Загружено ${done} из ${total}...`;
-      if (done === total) {
-        document.getElementById('status').innerHTML = `<strong>ГОТОВО! Загружено ${medsDatabase.length} препаратов</strong>`;
-        fillGroupFilter();
-        search();
-      }
+      if (done === total) finishLoading();
     }
 
     function processJSON(text) {
-      let data;
-      try { data = JSON.parse(text); } catch (e) { alert("Ошибка JSON"); return; }
-      processRows(data);
+      try { processRows(JSON.parse(text)); } catch (e) { alert("Ошибка JSON"); }
     }
 
     function processRows(rows) {
@@ -250,9 +311,8 @@
       });
     }
 
-    // Заполняем фильтр группами из базы (уникальные + отсортированные)
     function fillGroupFilter() {
-      const groups = [...new Set(medsDatabase.map(m => m.group))].sort();
+      const groups = [...new Set(medsDatabase.map(m => m.group))].filter(Boolean).sort();
       const select = document.getElementById('filterGroup');
       select.innerHTML = '<option value="">Все терапевтические группы</option>';
       groups.forEach(g => {
@@ -281,7 +341,7 @@
       if (type) list = list.filter(m => m.type === type);
       if (group) list = list.filter(m => m.group === group);
 
-      list.sort((a, b) => parseInt(a.price) - parseInt(b.price));
+      list.sort((a, b) => a.price.localeCompare(b.price));
 
       const tbody = document.getElementById('results');
       tbody.innerHTML = "";
@@ -293,13 +353,13 @@
         if (m.type === "Оригинал") tr.classList.add("original");
 
         tr.innerHTML = `
-      <td>${m.mnn || "-"}</td>
-      <td><strong>${m.trade || "-"}</strong></td>
-      <td>${m.producer} (${m.country})</td>
-      <td>${m.form}</td>
-      <td>${m.price}</td>
-      <td><strong>${m.type}</strong></td>
-    `;
+          <td>${m.mnn || "-"}</td>
+          <td><strong>${m.trade || "-"}</strong></td>
+          <td>${m.producer} (${m.country})</td>
+          <td>${m.form}</td>
+          <td>${m.price}</td>
+          <td><strong>${m.type}</strong></td>
+        `;
         tbody.appendChild(tr);
       });
 
@@ -308,101 +368,74 @@
       } else {
         const total = document.createElement('tr');
         total.innerHTML = `<td colspan="6" style="background:#27ae60;color:white;text-align:center;font-weight:bold">
-      Найдено: ${list.length} из ${medsDatabase.length} препаратов</td>`;
+          Найдено: ${list.length} из ${medsDatabase.length} препаратов</td>`;
         tbody.insertBefore(total, tbody.firstChild);
       }
     }
 
     function exportPDF() {
-        if (medsDatabase.length === 0) return alert("Сначала загрузите файл!");
+      if (medsDatabase.length === 0) return alert("Нет данных для экспорта!");
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF('l', 'mm', 'a4');
+      const margin = 10;
+      let y = 20;
 
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF('l', 'mm', 'a4');
-        const pageWidth = doc.internal.pageSize.getWidth();
-        const margin = 10;
-        let y = 20;
+      doc.setFontSize(16);
+      doc.setFont("helvetica", "bold");
+      doc.text("Реестр лекарственных средств Узбекистана №29 (14.11.2025)", margin, y);
+      y += 10;
 
-        // Заголовок
-        doc.setFontSize(16);
-        doc.setFont("helvetica", "bold");
-        doc.text("Реестр лекарственных средств Узбекистана №29 (14.11.2025)", margin, y);
-        y += 8;
+      const found = document.querySelectorAll('#results tr').length - 1;
+      doc, 并且.setFontSize(11);
+      doc.setFont("helvetica", "normal");
+      doc.text(`Найдено препаратов: ${found}`, margin, y);
+      y += 10;
 
-        // Количество найденных
-        const found = document.querySelectorAll('#results tr').length - 1;
-        doc.setFontSize(11);
-        doc.setFont("helvetica", "normal");
-        doc.text(`Найдено препаратов: ${found}`, margin, y);
-        y += 10;
+      const dataRows = Array.from(document.querySelectorAll('#results tr')).slice(1)
+        .map(tr => Array.from(tr.cells).map(td => td.textContent.trim()));
 
-        // Получаем только строки с данными (пропускаем строку "Найдено: ...")
-        const dataRows = Array.from(document.querySelectorAll('#results tr'))
-          .slice(1)
-          .map(tr => Array.from(tr.cells).map(td => td.textContent.trim()));
+      const columns = [
+        { header: "МНН", width: 28 },
+        { header: "Торговое название", width: 42 },
+        { header: "Производитель / Страна", width: 52 },
+        { header: "Форма выпуска", width: 62 },
+        { header: "Цена (сум)", width: 25 },
+        { header: "Тип", width: 20 }
+      ];
 
-        // Колонки
-        const columns = [
-          { header: "МНН", width: 28 },
-          { header: "Торговое название", width: 42 },
-          { header: "Производитель / Страна", width: 52 },
-          { header: "Форма выпуска", width: 62 },
-          { header: "Цена (сум)", width: 25 },
-          { header: "Тип", width: 20 }
-        ];
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "bold");
+      let x = margin;
+      columns.forEach(col => { doc.text(col.header, x, y); x += col.width; });
+      y += 4;
+      doc.line(margin, y, 287, y);
+      y += 6;
 
-        // Рисуем шапку таблицы
-        doc.setFontSize(9);
-        doc.setFont("helvetica", "bold");
-        let x = margin;
-        columns.forEach(col => {
-          doc.text(col.header, x, y);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(8.5);
+
+      dataRows.forEach(row => {
+        if (y > 190) {
+          doc.addPage(); y = 20; x = margin;
+          doc.setFont("helvetica", "bold");
+          columns.forEach(col => { doc.text(col.header, x, y); x += col.width; });
+          y += 4; doc.line(margin, y, 287, y); y += 6;
+          doc.setFont("helvetica", "normal");
+        }
+
+        let maxLines = 1;
+        x = margin;
+        columns.forEach((col, i) => {
+          const lines = doc.splitTextToSize(row[i] || "", col.width - 3);
+          doc.text(lines, x, y);
+          maxLines = Math.max(maxLines, lines.length);
           x += col.width;
         });
-        y += 4;
-        doc.setLineWidth(0.4);
-        doc.line(margin, y, pageWidth - margin, y);
-        y += 6;
+        y += maxLines * 4.5 + 2;
+      });
 
-        // Данные
-        doc.setFont("helvetica", "normal");
-        doc.setFontSize(8.5);
-
-        dataRows.forEach(row => {
-          if (y > 190) {
-            doc.addPage();
-            y = 20;
-            // Повторяем шапку на новой странице
-            x = margin;
-            doc.setFont("helvetica", "bold");
-            columns.forEach(col => {
-              doc.text(col.header, x, y);
-              x += col.width;
-            });
-            y += 4;
-            doc.line(margin, y, pageWidth - margin, y);
-            y += 6;
-            doc.setFont("helvetica", "normal");
-          }
-
-          let maxLines = 1;
-          x = margin;
-
-          columns.forEach((col, i) => {
-            const text = row[i] || "";
-            const lines = doc.splitTextToSize(text, col.width - 3);
-            doc.text(lines, x, y);
-            maxLines = Math.max(maxLines, lines.length);
-            x += col.width;
-          });
-
-          y += maxLines * 4.5 + 2; // высота строки
-        });
-
-        const date = new Date().toLocaleDateString('ru-RU').replaceAll('.', '-');
-        doc.save(`Реестр_Узбекистан_2025_${date}.pdf`);
-      }
-
- 
+      doc.save(`Реестр_Узбекистан_2025_${new Date().toLocaleDateString('ru').replace(/\./g, '-')}.pdf`);
+    }
   </script>
 </body>
 

@@ -1,0 +1,14 @@
+
+git init
+
+
+git add .
+
+
+git commit -m "Реестр лекарств Узбекистана №29"
+
+
+git remote add origin https://github.com/uz-itlife/uzmed.git
+
+
+git push -u origin main
