@@ -378,23 +378,31 @@
       let list = medsDatabase;
 
       const q = document.getElementById('query').value.toLowerCase().trim();
-      const country = document.getValue('filterCountry');
-      const type = getValue('filterType');
-      const group = getValue('filterGroup');
+      const countryFilter = document.getElementById('filterCountry').value;
+      const typeFilter = document.getElementById('filterType').value;
+      const groupFilter = document.getElementById('filterGroup').value;
 
       if (q) {
         list = list.filter(m => {
-          const searchText = `${m.mnn || ''} ${m.trade || ''} ${m.producer || ''} ${m.group || ''} ${m.country || ''}`.toLowerCase();
-          return searchText.includes(q);
+          const text = `${m.mnn || ''} ${m.trade || ''} ${m.producer || ''} ${m.group || ''} ${m.country || ''}`.toLowerCase();
+          return text.includes(q);
         });
       }
 
-      if (country === "Узбекистан") list = list.filter(m => (m.country || "").includes("Узбекистан"));
-      if (country === "Импорт") list = list.filter(m => !(m.country || "").includes("Узбекистан"));
-      if (type) list = list.filter(m => m.type === type);
-      if (group) list = list.filter(m => (m.group || "") === group);
+      if (countryFilter === "Узбекистан") {
+        list = list.filter(m => (m.country || "").includes("Узбекистан"));
+      }
+      if (countryFilter === "Импорт") {
+        list = list.filter(m => !(m.country || "").includes("Узбекистан"));
+      }
+      if (typeFilter) {
+        list = list.filter(m => m.type === typeFilter);
+      }
+      if (groupFilter) {
+        list = list.filter(m => (m.group || "") === groupFilter);
+      }
 
-      // Сортировка по цене (если цена есть)
+      // Сортировка по цене (если есть)
       list.sort((a, b) => (a.price || "").localeCompare(b.price || ""));
 
       const tbody = document.getElementById('results');
@@ -420,13 +428,13 @@
       if (list.length === 0) {
         tbody.innerHTML = "<tr><td colspan='6' style='text-align:center;padding:40px;color:#e74c3c'>Ничего не найдено</td></tr>";
       } else {
-        const total = document.createElement('tr');
-        total.innerHTML = `<td colspan="6" style="background:#27ae60;color:white;text-align:center;font-weight:bold">
-      Найдено: ${list.length} из ${medsDatabase.length} препаратов</td>`;
-        tbody.insertBefore(total, tbody.firstChild);
+        const totalRow = document.createElement('tr');
+        totalRow.innerHTML = `<td colspan="6" style="background:#27ae60;color:white;text-align:center;font-weight:bold;padding:15px">
+      Найдено: ${list.length} из ${medsDatabase.length} препаратов
+    </td>`;
+        tbody.insertBefore(totalRow, tbody.firstChild);
       }
     }
-
     function exportPDF() {
       if (medsDatabase.length === 0) return alert("Нет данных!");
       const { jsPDF } = window.jspdf;
