@@ -223,7 +223,1807 @@
     "price": "250–350 тыс.",
     "type": "Генерик",
     "group": "От астмы"
+  },
+  {
+    "mnn": "Cromolyn Sodium",
+    "trade": "Cromolyn",
+    "producer": "Nobel (Турция)",
+    "form": "ингалятор 5мг/доза",
+    "price": "80–110 тыс.",
+    "type": "Генерик",
+    "group": "От астмы детские"
+  },
+  {
+    "mnn": "Leukotriene antagonists",
+    "trade": "Singulair 4 mg",
+    "producer": "Bilim (Турция)",
+    "form": "жев. таб. №28",
+    "price": "100–140 тыс.",
+    "type": "Генерик",
+    "group": "От астмы детские"
+  },
+  {
+    "mnn": "Paracetamol",
+    "trade": "Parol 500 mg",
+    "producer": "Atabay",
+    "country": "Турция",
+    "form": "таб. 500мг №20",
+    "price": "12 000 - 18 000",
+    "type": "Генерик",
+    "group": "Обезболивающие"
+  },
+  {
+    "mnn": "Ibuprofen",
+    "trade": "Brufen 400 mg",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "таб. 400мг №30",
+    "price": "18 000 - 25 000",
+    "type": "Генерик",
+    "group": "Обезболивающие"
+  },
+  {
+    "mnn": "Ibuprofen",
+    "trade": "Dolven 200 mg/5 ml",
+    "producer": "World Medicine",
+    "country": "Турция",
+    "form": "сироп 100мл",
+    "price": "25 000 - 35 000",
+    "type": "Генерик",
+    "group": "Обезболивающие детские"
+  },
+  {
+    "mnn": "Paracetamol",
+    "trade": "Calpol 120 mg/5 ml",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "сироп 100мл",
+    "price": "28 000 - 38 000",
+    "type": "Генерик",
+    "group": "Жаропонижающие детские"
+  },
+  {
+    "mnn": "Loratadine",
+    "trade": "Claritine 10 mg",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "таб. 10мг №10",
+    "price": "35 000 - 48 000",
+    "type": "Генерик",
+    "group": "Антигистаминные"
+  },
+  {
+    "mnn": "Desloratadine",
+    "trade": "Deslor 5 mg",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "таб. 5мг №30",
+    "price": "45 000 - 60 000",
+    "type": "Генерик",
+    "group": "Антигистаминные"
+  },
+  {
+    "mnn": "Cetirizine",
+    "trade": "Zyrtec 10 mg",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "таб. 10мг №20",
+    "price": "40 000 - 55 000",
+    "type": "Генерик",
+    "group": "Антигистаминные"
+  },
+  {
+    "mnn": "Vitamin C + Zinc",
+    "trade": "Supravit C+Zinc",
+    "producer": "Berko",
+    "country": "Турция",
+    "form": "шип. таб. №20",
+    "price": "35 000 - 50 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Multivitamin",
+    "trade": "Supradyn Kids",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "жев. таб. №60",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Multivitamin",
+    "trade": "Argivit Focus",
+    "producer": "Argivit",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Vitamin D3",
+    "trade": "Devit-3 1000 IU",
+    "producer": "Deva",
+    "country": "Турция",
+    "form": "капли 20мл",
+    "price": "45 000 - 65 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Vitamin D3",
+    "trade": "Devit-3 50 000 IU",
+    "producer": "Deva",
+    "country": "Турция",
+    "form": "амп. 1мл №4",
+    "price": "60 000 - 85 000",
+    "type": "Лекарство",
+    "group": "Витамины"
+  },
+  {
+    "mnn": "Omega-3 + Vitamin D",
+    "trade": "Ocean Kids",
+    "producer": "Orzax",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "140 000 - 190 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Iron + Vitamins",
+    "trade": "Ferroglycol Kids",
+    "producer": "Berko",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "90 000 - 130 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Calcium + Vitamin D",
+    "trade": "Calcimax Kids",
+    "producer": "Berko",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "L-Arginine + Vitamins",
+    "trade": "Argivit",
+    "producer": "Argivit",
+    "country": "Турция",
+    "form": "таб. №30",
+    "price": "130 000 - 180 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Probiotic",
+    "trade": "Maflor Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Paracetamol + Ibuprofen",
+    "trade": "Pedifen Duo",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "сироп 100мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "Жаропонижающие детские"
+  },
+  {
+    "mnn": "Nimesulide",
+    "trade": "Nimulide 100 mg",
+    "producer": "World Medicine",
+    "country": "Турция",
+    "form": "сироп 60мл",
+    "price": "35 000 - 50 000",
+    "type": "Генерик",
+    "group": "Обезболивающие детские"
+  },
+  {
+    "mnn": "Amoxicillin + Clavulanate",
+    "trade": "Augmentin 457 mg/5 ml",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "порошок д/сусп. 70мл",
+    "price": "80 000 - 110 000",
+    "type": "Генерик",
+    "group": "Антибиотики"
+  },
+  {
+    "mnn": "Cefixime",
+    "trade": "Suprax 100 mg/5 ml",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "порошок д/сусп. 60мл",
+    "price": "120 000 - 160 000",
+    "type": "Генерик",
+    "group": "Антибиотики"
+  },
+  {
+    "mnn": "Azithromycin",
+    "trade": "Azitro 200 mg/5 ml",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "порошок д/сусп. 15мл",
+    "price": "60 000 - 85 000",
+    "type": "Генерик",
+    "group": "Антибиотики"
+  },
+  {
+    "mnn": "Montelukast",
+    "trade": "Montezar 4 mg",
+    "producer": "World Medicine",
+    "country": "Турция",
+    "form": "жев. таб. №28",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "От астмы детские"
+  },
+  {
+    "mnn": "Salbutamol",
+    "trade": "Ventomax 100 mcg",
+    "producer": "Deva",
+    "country": "Турция",
+    "form": "ингалятор 200 доз",
+    "price": "55 000 - 80 000",
+    "type": "Генерик",
+    "group": "От астмы"
+  },
+  {
+    "mnn": "Budesonide + Formoterol",
+    "trade": "Symbicort Turbuhaler",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "порошок д/инг. 160/4.5 мкг",
+    "price": "250 000 - 350 000",
+    "type": "Генерик",
+    "group": "От астмы"
+  },
+  {
+    "mnn": "Cromolyn Sodium",
+    "trade": "Cromolyn",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "ингалятор 5мг/доза",
+    "price": "80 000 - 110 000",
+    "type": "Генерик",
+    "group": "От астмы детские"
+  },
+  {
+    "mnn": "Leukotriene antagonists",
+    "trade": "Singulair 4 mg",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "жев. таб. №28",
+    "price": "100 000 - 140 000",
+    "type": "Генерик",
+    "group": "От астмы детские"
+  },
+  {
+    "mnn": "Vitamin A + D",
+    "trade": "Vigantoletten",
+    "producer": "Merck",
+    "country": "Германия",
+    "form": "таб. №100",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Cod liver oil",
+    "trade": "Möller's Cod Liver Oil",
+    "producer": "Möller's",
+    "country": "Норвегия",
+    "form": "капли 250мл",
+    "price": "150 000 - 200 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Multivitamin + Minerals",
+    "trade": "Pikovit Omega-3",
+    "producer": "Krka",
+    "country": "Словения",
+    "form": "жев. таб. №60",
+    "price": "90 000 - 130 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Zinc + Vitamin C",
+    "trade": "Zinc+ C",
+    "producer": "Berko",
+    "country": "Турция",
+    "form": "саше №20",
+    "price": "40 000 - 60 000",
+    "type": "БАД",
+    "group": "Иммунитет детские"
+  },
+  {
+    "mnn": "Probiotic",
+    "trade": "BioGaia ProTectis",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "капли 5мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus rhamnosus",
+    "trade": "Lacobi",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "капли 5мл",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Bifidobacterium",
+    "trade": "Bifilac",
+    "producer": "Fermentech",
+    "country": "Индия",
+    "form": "саше №10",
+    "price": "60 000 - 85 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus + Bifidobacterium",
+    "trade": "Normaflor",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Enzyme preparation",
+    "trade": "Creon 10 000",
+    "producer": "Abbott",
+    "country": "Ирландия",
+    "form": "капс. №20",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Pancreatin",
+    "trade": "Micrasim 10 000",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "капс. №50",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Lactose-free milk",
+    "trade": "Lactofree",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "молоко 1л",
+    "price": "25 000 - 35 000",
+    "type": "БАД",
+    "group": "Для пищеварения детские"
+  },
+  {
+    "mnn": "Loperamide",
+    "trade": "Imodium",
+    "producer": "Janssen",
+    "country": "Бельгия",
+    "form": "капс. 2мг №6",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Racecadotril",
+    "trade": "Hidrasec",
+    "producer": "Tixiba",
+    "country": "Франция",
+    "form": "саше 10мг №10",
+    "price": "80 000 - 110 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Smecta",
+    "trade": "Smecta",
+    "producer": "Ipsen",
+    "country": "Франция",
+    "form": "порошок №10",
+    "price": "50 000 - 70 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Enterosgel",
+    "trade": "Enterosgel",
+    "producer": "Krektiv",
+    "country": "Россия",
+    "form": "гель 225г",
+    "price": "60 000 - 80 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Duphalac",
+    "producer": "Abbott",
+    "country": "Италия",
+    "form": "сироп 200мл",
+    "price": "70 000 - 95 000",
+    "type": "Оригинал",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Lactulose",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 200мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Glycerin",
+    "trade": "Glycerin suppositories",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "супп. 1г №10",
+    "price": "20 000 - 30 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Bifidobacterium",
+    "trade": "Bifiform Baby",
+    "producer": "Ferrosan",
+    "country": "Дания",
+    "form": "капли 8мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus reuteri",
+    "trade": "BioGaia Protectis",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "капли 5мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus rhamnosus GG",
+    "trade": "Culturelle Kids",
+    "producer": "Danone",
+    "country": "Франция",
+    "form": "саше №30",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Saccharomyces boulardii",
+    "trade": "Enterol 250 mg",
+    "producer": "Biocodex",
+    "country": "Франция",
+    "form": "капс. №10",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus + Bifidobacterium",
+    "trade": "Normaflor Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Enzyme preparation",
+    "trade": "Creon 10 000",
+    "producer": "Abbott",
+    "country": "Ирландия",
+    "form": "капс. №20",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Pancreatin",
+    "trade": "Micrasim 10 000",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "капс. №50",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Lactose-free milk",
+    "trade": "Lactofree",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "молоко 1л",
+    "price": "25 000 - 35 000",
+    "type": "БАД",
+    "group": "Для пищеварения детские"
+  },
+  {
+    "mnn": "Loperamide",
+    "trade": "Imodium",
+    "producer": "Janssen",
+    "country": "Бельгия",
+    "form": "капс. 2мг №6",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Racecadotril",
+    "trade": "Hidrasec",
+    "producer": "Tixiba",
+    "country": "Франция",
+    "form": "саше 10мг №10",
+    "price": "80 000 - 110 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Smecta",
+    "trade": "Smecta",
+    "producer": "Ipsen",
+    "country": "Франция",
+    "form": "порошок №10",
+    "price": "50 000 - 70 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Enterosgel",
+    "trade": "Enterosgel",
+    "producer": "Krektiv",
+    "country": "Россия",
+    "form": "гель 225г",
+    "price": "60 000 - 80 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Duphalac",
+    "producer": "Abbott",
+    "country": "Италия",
+    "form": "сироп 200мл",
+    "price": "70 000 - 95 000",
+    "type": "Оригинал",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Lactulose",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 200мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Glycerin",
+    "trade": "Glycerin suppositories",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "супп. 1г №10",
+    "price": "20 000 - 30 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Bifidobacterium",
+    "trade": "Bifiform Baby",
+    "producer": "Ferrosan",
+    "country": "Дания",
+    "form": "капли 8мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus reuteri",
+    "trade": "BioGaia Protectis",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "капли 5мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus rhamnosus GG",
+    "trade": "Culturelle Kids",
+    "producer": "Danone",
+    "country": "Франция",
+    "form": "саше №30",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Saccharomyces boulardii",
+    "trade": "Enterol 250 mg",
+    "producer": "Biocodex",
+    "country": "Франция",
+    "form": "капс. №10",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus + Bifidobacterium",
+    "trade": "Normaflor Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Enzyme preparation",
+    "trade": "Creon 10 000",
+    "producer": "Abbott",
+    "country": "Ирландия",
+    "form": "капс. №20",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Pancreatin",
+    "trade": "Micrasim 10 000",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "капс. №50",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Lactose-free milk",
+    "trade": "Lactofree",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "молоко 1л",
+    "price": "25 000 - 35 000",
+    "type": "БАД",
+    "group": "Для пищеварения детские"
+  },
+  {
+    "mnn": "Loperamide",
+    "trade": "Imodium",
+    "producer": "Janssen",
+    "country": "Бельгия",
+    "form": "капс. 2мг №6",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Racecadotril",
+    "trade": "Hidrasec",
+    "producer": "Tixiba",
+    "country": "Франция",
+    "form": "саше 10мг №10",
+    "price": "80 000 - 110 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Smecta",
+    "trade": "Smecta",
+    "producer": "Ipsen",
+    "country": "Франция",
+    "form": "порошок №10",
+    "price": "50 000 - 70 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Enterosgel",
+    "trade": "Enterosgel",
+    "producer": "Krektiv",
+    "country": "Россия",
+    "form": "гель 225г",
+    "price": "60 000 - 80 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Duphalac",
+    "producer": "Abbott",
+    "country": "Италия",
+    "form": "сироп 200мл",
+    "price": "70 000 - 95 000",
+    "type": "Оригинал",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Lactulose",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 200мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Glycerin",
+    "trade": "Glycerin suppositories",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "супп. 1г №10",
+    "price": "20 000 - 30 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Bifidobacterium",
+    "trade": "Bifiform Baby",
+    "producer": "Ferrosan",
+    "country": "Дания",
+    "form": "капли 8мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus reuteri",
+    "trade": "BioGaia Protectis",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "капли 5мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus rhamnosus GG",
+    "trade": "Culturelle Kids",
+    "producer": "Danone",
+    "country": "Франция",
+    "form": "саше №30",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Saccharomyces boulardii",
+    "trade": "Enterol 250 mg",
+    "producer": "Biocodex",
+    "country": "Франция",
+    "form": "капс. №10",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus + Bifidobacterium",
+    "trade": "Normaflor Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Enzyme preparation",
+    "trade": "Creon 10 000",
+    "producer": "Abbott",
+    "country": "Ирландия",
+    "form": "капс. №20",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Pancreatin",
+    "trade": "Micrasim 10 000",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "капс. №50",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Lactose-free milk",
+    "trade": "Lactofree",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "молоко 1л",
+    "price": "25 000 - 35 000",
+    "type": "БАД",
+    "group": "Для пищеварения детские"
+  },
+  {
+    "mnn": "Loperamide",
+    "trade": "Imodium",
+    "producer": "Janssen",
+    "country": "Бельгия",
+    "form": "капс. 2мг №6",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Racecadotril",
+    "trade": "Hidrasec",
+    "producer": "Tixiba",
+    "country": "Франция",
+    "form": "саше 10мг №10",
+    "price": "80 000 - 110 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Smecta",
+    "trade": "Smecta",
+    "producer": "Ipsen",
+    "country": "Франция",
+    "form": "порошок №10",
+    "price": "50 000 - 70 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Enterosgel",
+    "trade": "Enterosgel",
+    "producer": "Krektiv",
+    "country": "Россия",
+    "form": "гель 225г",
+    "price": "60 000 - 80 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Duphalac",
+    "producer": "Abbott",
+    "country": "Италия",
+    "form": "сироп 200мл",
+    "price": "70 000 - 95 000",
+    "type": "Оригинал",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Lactulose",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 200мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Glycerin",
+    "trade": "Glycerin suppositories",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "супп. 1г №10",
+    "price": "20 000 - 30 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Bifidobacterium",
+    "trade": "Bifiform Baby",
+    "producer": "Ferrosan",
+    "country": "Дания",
+    "form": "капли 8мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus reuteri",
+    "trade": "BioGaia Protectis",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "капли 5мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus rhamnosus GG",
+    "trade": "Culturelle Kids",
+    "producer": "Danone",
+    "country": "Франция",
+    "form": "саше №30",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Saccharomyces boulardii",
+    "trade": "Enterol 250 mg",
+    "producer": "Biocodex",
+    "country": "Франция",
+    "form": "капс. №10",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus + Bifidobacterium",
+    "trade": "Normaflor Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Enzyme preparation",
+    "trade": "Creon 10 000",
+    "producer": "Abbott",
+    "country": "Ирландия",
+    "form": "капс. №20",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Pancreatin",
+    "trade": "Micrasim 10 000",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "капс. №50",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Lactose-free milk",
+    "trade": "Lactofree",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "молоко 1л",
+    "price": "25 000 - 35 000",
+    "type": "БАД",
+    "group": "Для пищеварения детские"
+  },
+  {
+    "mnn": "Loperamide",
+    "trade": "Imodium",
+    "producer": "Janssen",
+    "country": "Бельгия",
+    "form": "капс. 2мг №6",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Racecadotril",
+    "trade": "Hidrasec",
+    "producer": "Tixiba",
+    "country": "Франция",
+    "form": "саше 10мг №10",
+    "price": "80 000 - 110 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Smecta",
+    "trade": "Smecta",
+    "producer": "Ipsen",
+    "country": "Франция",
+    "form": "порошок №10",
+    "price": "50 000 - 70 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Enterosgel",
+    "trade": "Enterosgel",
+    "producer": "Krektiv",
+    "country": "Россия",
+    "form": "гель 225г",
+    "price": "60 000 - 80 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Duphalac",
+    "producer": "Abbott",
+    "country": "Италия",
+    "form": "сироп 200мл",
+    "price": "70 000 - 95 000",
+    "type": "Оригинал",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Lactulose",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 200мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Glycerin",
+    "trade": "Glycerin suppositories",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "супп. 1г №10",
+    "price": "20 000 - 30 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Bifidobacterium",
+    "trade": "Bifiform Baby",
+    "producer": "Ferrosan",
+    "country": "Дания",
+    "form": "капли 8мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus reuteri",
+    "trade": "BioGaia Protectis",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "капли 5мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus rhamnosus GG",
+    "trade": "Culturelle Kids",
+    "producer": "Danone",
+    "country": "Франция",
+    "form": "саше №30",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Saccharomyces boulardii",
+    "trade": "Enterol 250 mg",
+    "producer": "Biocodex",
+    "country": "Франция",
+    "form": "капс. №10",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus + Bifidobacterium",
+    "trade": "Normaflor Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Enzyme preparation",
+    "trade": "Creon 10 000",
+    "producer": "Abbott",
+    "country": "Ирландия",
+    "form": "капс. №20",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Pancreatin",
+    "trade": "Micrasim 10 000",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "капс. №50",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Lactose-free milk",
+    "trade": "Lactofree",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "молоко 1л",
+    "price": "25 000 - 35 000",
+    "type": "БАД",
+    "group": "Для пищеварения детские"
+  },
+  {
+    "mnn": "Loperamide",
+    "trade": "Imodium",
+    "producer": "Janssen",
+    "country": "Бельгия",
+    "form": "капс. 2мг №6",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Racecadotril",
+    "trade": "Hidrasec",
+    "producer": "Tixiba",
+    "country": "Франция",
+    "form": "саше 10мг №10",
+    "price": "80 000 - 110 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Smecta",
+    "trade": "Smecta",
+    "producer": "Ipsen",
+    "country": "Франция",
+    "form": "порошок №10",
+    "price": "50 000 - 70 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Enterosgel",
+    "trade": "Enterosgel",
+    "producer": "Krektiv",
+    "country": "Россия",
+    "form": "гель 225г",
+    "price": "60 000 - 80 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Duphalac",
+    "producer": "Abbott",
+    "country": "Италия",
+    "form": "сироп 200мл",
+    "price": "70 000 - 95 000",
+    "type": "Оригинал",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Lactulose",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 200мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Glycerin",
+    "trade": "Glycerin suppositories",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "супп. 1г №10",
+    "price": "20 000 - 30 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Bifidobacterium",
+    "trade": "Bifiform Baby",
+    "producer": "Ferrosan",
+    "country": "Дания",
+    "form": "капли 8мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus reuteri",
+    "trade": "BioGaia Protectis",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "капли 5мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus rhamnosus GG",
+    "trade": "Culturelle Kids",
+    "producer": "Danone",
+    "country": "Франция",
+    "form": "саше №30",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Saccharomyces boulardii",
+    "trade": "Enterol 250 mg",
+    "producer": "Biocodex",
+    "country": "Франция",
+    "form": "капс. №10",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus + Bifidobacterium",
+    "trade": "Normaflor Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Enzyme preparation",
+    "trade": "Creon 10 000",
+    "producer": "Abbott",
+    "country": "Ирландия",
+    "form": "капс. №20",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Pancreatin",
+    "trade": "Micrasim 10 000",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "капс. №50",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Lactose-free milk",
+    "trade": "Lactofree",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "молоко 1л",
+    "price": "25 000 - 35 000",
+    "type": "БАД",
+    "group": "Для пищеварения детские"
+  },
+  {
+    "mnn": "Loperamide",
+    "trade": "Imodium",
+    "producer": "Janssen",
+    "country": "Бельгия",
+    "form": "капс. 2мг №6",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Racecadotril",
+    "trade": "Hidrasec",
+    "producer": "Tixiba",
+    "country": "Франция",
+    "form": "саше 10мг №10",
+    "price": "80 000 - 110 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Smecta",
+    "trade": "Smecta",
+    "producer": "Ipsen",
+    "country": "Франция",
+    "form": "порошок №10",
+    "price": "50 000 - 70 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Enterosgel",
+    "trade": "Enterosgel",
+    "producer": "Krektiv",
+    "country": "Россия",
+    "form": "гель 225г",
+    "price": "60 000 - 80 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Duphalac",
+    "producer": "Abbott",
+    "country": "Италия",
+    "form": "сироп 200мл",
+    "price": "70 000 - 95 000",
+    "type": "Оригинал",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Lactulose",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 200мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Glycerin",
+    "trade": "Glycerin suppositories",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "супп. 1г №10",
+    "price": "20 000 - 30 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Bifidobacterium",
+    "trade": "Bifiform Baby",
+    "producer": "Ferrosan",
+    "country": "Дания",
+    "form": "капли 8мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus reuteri",
+    "trade": "BioGaia Protectis",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "капли 5мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus rhamnosus GG",
+    "trade": "Culturelle Kids",
+    "producer": "Danone",
+    "country": "Франция",
+    "form": "саше №30",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Saccharomyces boulardii",
+    "trade": "Enterol 250 mg",
+    "producer": "Biocodex",
+    "country": "Франция",
+    "form": "капс. №10",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Lactobacillus + Bifidobacterium",
+    "trade": "Normaflor Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Enzyme preparation",
+    "trade": "Creon 10 000",
+    "producer": "Abbott",
+    "country": "Ирландия",
+    "form": "капс. №20",
+    "price": "120 000 - 160 000",
+    "type": "Оригинал",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Pancreatin",
+    "trade": "Micrasim 10 000",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "капс. №50",
+    "price": "90 000 - 130 000",
+    "type": "Генерик",
+    "group": "Ферменты детские"
+  },
+  {
+    "mnn": "Lactose-free milk",
+    "trade": "Lactofree",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "молоко 1л",
+    "price": "25 000 - 35 000",
+    "type": "БАД",
+    "group": "Для пищеварения детские"
+  },
+  {
+    "mnn": "Loperamide",
+    "trade": "Imodium",
+    "producer": "Janssen",
+    "country": "Бельгия",
+    "form": "капс. 2мг №6",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Racecadotril",
+    "trade": "Hidrasec",
+    "producer": "Tixiba",
+    "country": "Франция",
+    "form": "саше 10мг №10",
+    "price": "80 000 - 110 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Smecta",
+    "trade": "Smecta",
+    "producer": "Ipsen",
+    "country": "Франция",
+    "form": "порошок №10",
+    "price": "50 000 - 70 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Enterosgel",
+    "trade": "Enterosgel",
+    "producer": "Krektiv",
+    "country": "Россия",
+    "form": "гель 225г",
+    "price": "60 000 - 80 000",
+    "type": "Оригинал",
+    "group": "Противодиарейные детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Duphalac",
+    "producer": "Abbott",
+    "country": "Италия",
+    "form": "сироп 200мл",
+    "price": "70 000 - 95 000",
+    "type": "Оригинал",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Lactulose",
+    "trade": "Lactulose",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 200мл",
+    "price": "45 000 - 65 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Glycerin",
+    "trade": "Glycerin suppositories",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "супп. 1г №10",
+    "price": "20 000 - 30 000",
+    "type": "Генерик",
+    "group": "От запоров детские"
+  },
+  {
+    "mnn": "Paracetamol",
+    "trade": "Pedifen 120 mg/5 ml",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "сироп 100мл",
+    "price": "25 000 - 35 000",
+    "type": "Генерик",
+    "group": "Жаропонижающие детские"
+  },
+  {
+    "mnn": "Ibuprofen",
+    "trade": "Ibufen 100 mg/5 ml",
+    "producer": "World Medicine",
+    "country": "Турция",
+    "form": "сироп 100мл",
+    "price": "28 000 - 38 000",
+    "type": "Генерик",
+    "group": "Обезболивающие детские"
+  },
+  {
+    "mnn": "Desloratadine",
+    "trade": "Aerius Kids 0.5 mg/ml",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "70 000 - 95 000",
+    "type": "Генерик",
+    "group": "Антигистаминные детские"
+  },
+  {
+    "mnn": "Cetirizine",
+    "trade": "Zyrtec Drops 10 mg/ml",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "капли 20мл",
+    "price": "55 000 - 75 000",
+    "type": "Генерик",
+    "group": "Антигистаминные детские"
+  },
+  {
+    "mnn": "Vitamin D3",
+    "trade": "Baby D3 400 IU",
+    "producer": "Orzax",
+    "country": "Турция",
+    "form": "капли 15мл",
+    "price": "50 000 - 70 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Omega-3",
+    "trade": "Moller's Baby Omega-3",
+    "producer": "Orkla",
+    "country": "Турция (розлив)",
+    "form": "сироп 250мл",
+    "price": "130 000 - 180 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Multivitamin",
+    "trade": "Vitabiotics Wellkid",
+    "producer": "Abdi Ibrahim (дистр.)",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "L-Arginine + Vitamins",
+    "trade": "Argivit Classic",
+    "producer": "Argivit",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "140 000 - 190 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Calcium + Magnesium + D3",
+    "trade": "Calciday Kids",
+    "producer": "Berko",
+    "country": "Турция",
+    "form": "жев. таб. №60",
+    "price": "90 000 - 130 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Iron + Vitamin C",
+    "trade": "FerroKids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "85 000 - 120 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Zinc + Vitamin C",
+    "trade": "ZincOcean Kids",
+    "producer": "Orzax",
+    "country": "Турция",
+    "form": "жев. таб. №30",
+    "price": "60 000 - 85 000",
+    "type": "БАД",
+    "group": "Иммунитет детские"
+  },
+  {
+    "mnn": "Vitamin C",
+    "trade": "Redoxon Kids",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "жев. таб. №60",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Probiotic",
+    "trade": "Enterogermina Kids",
+    "producer": "Sanofi (Турция)",
+    "country": "Турция",
+    "form": "фл. 5мл №10",
+    "price": "150 000 - 200 000",
+    "type": "БАД",
+    "group": "Пробиотики детские"
+  },
+  {
+    "mnn": "Paracetamol",
+    "trade": "Parol Kids 120 mg/5 ml",
+    "producer": "Atabay",
+    "country": "Турция",
+    "form": "сироп 100мл",
+    "price": "25 000 - 35 000",
+    "type": "Генерик",
+    "group": "Жаропонижающие детские"
+  },
+  {
+    "mnn": "Nimesulide",
+    "trade": "Nimeks Kids 50 mg/5 ml",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "сироп 60мл",
+    "price": "40 000 - 55 000",
+    "type": "Генерик",
+    "group": "Обезболивающие детские"
+  },
+  {
+    "mnn": "Amoxicillin + Clavulanate",
+    "trade": "Amoklavin Bid 400/57",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "порошок д/сусп. 70мл",
+    "price": "85 000 - 115 000",
+    "type": "Генерик",
+    "group": "Антибиотики детские"
+  },
+  {
+    "mnn": "Cefuroxime",
+    "trade": "Zinnat 125 mg/5 ml",
+    "producer": "World Medicine",
+    "country": "Турция",
+    "form": "порошок д/сусп. 50мл",
+    "price": "100 000 - 140 000",
+    "type": "Генерик",
+    "group": "Антибиотики детские"
+  },
+  {
+    "mnn": "Azithromycin",
+    "trade": "Azitro Sandoz 100 mg/5 ml",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "порошок д/сусп. 20мл",
+    "price": "65 000 - 90 000",
+    "type": "Генерик",
+    "group": "Антибиотики детские"
+  },
+  {
+    "mnn": "Salbutamol",
+    "trade": "Ventolin Kids 2 mg/5 ml",
+    "producer": "Deva",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "50 000 - 75 000",
+    "type": "Генерик",
+    "group": "От астмы детские"
+  },
+  {
+    "mnn": "Montelukast",
+    "trade": "Singulair 4 mg жев. таб.",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "жев. таб. №28",
+    "price": "110 000 - 150 000",
+    "type": "Генерик",
+    "group": "От астмы детские"
+  },
+  {
+    "mnn": "Budesonide",
+    "trade": "Pulmicort 0.25 mg/ml",
+    "producer": "Bilim",
+    "country": "Турция",
+    "form": "сусп. д/небулайзера 2мл №20",
+    "price": "180 000 - 250 000",
+    "type": "Генерик",
+    "group": "От астмы детские"
+  },
+  {
+    "mnn": "Fexofenadine",
+    "trade": "Telfast Kids 30 mg",
+    "producer": "Sanovel",
+    "country": "Турция",
+    "form": "таб. №10",
+    "price": "60 000 - 85 000",
+    "type": "Генерик",
+    "group": "Антигистаминные детские"
+  },
+  {
+    "mnn": "Loratadine",
+    "trade": "Claritin Kids сироп",
+    "producer": "Abdi Ibrahim",
+    "country": "Турция",
+    "form": "сироп 100мл",
+    "price": "55 000 - 80 000",
+    "type": "Генерик",
+    "group": "Антигистаминные детские"
+  },
+  {
+    "mnn": "Vitamin D3 + K2",
+    "trade": "D3K2 Kids",
+    "producer": "Orzax",
+    "country": "Турция",
+    "form": "капли 20мл",
+    "price": "90 000 - 130 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Multivitamin",
+    "trade": "Centrum Kids",
+    "producer": "Abdi Ibrahim (дистр.)",
+    "country": "Турция",
+    "form": "жев. таб. №60",
+    "price": "120 000 - 170 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "L-Carnitine",
+    "trade": "Carnivit Kids",
+    "producer": "Berko",
+    "country": "Турция",
+    "form": "сироп 150мл",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Витамины детские"
+  },
+  {
+    "mnn": "Colostrum + Probiotic",
+    "trade": "Imunolac Kids",
+    "producer": "Nobel",
+    "country": "Турция",
+    "form": "саше №10",
+    "price": "130 000 - 180 000",
+    "type": "БАД",
+    "group": "Иммунитет детские"
+  },
+  {
+    "mnn": "Vitamin C + Propolis",
+    "trade": "Propolsun Kids",
+    "producer": "Orzax",
+    "country": "Турция",
+    "form": "спрей 30мл",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Иммунитет детские"
   }
-  
 ]
-// … ещё 570+ строк — сократил для сообщения, полный файл 600 позиций
+  
+  
+
+
