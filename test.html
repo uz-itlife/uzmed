@@ -1908,3 +1908,601 @@ document.getElementById('status').innerHTML = `<strong>ГОТОВО! Загру�
 fillGroupFilter();
 search();
 }
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лекарства Узбекистана 2025 — Реестр №29 + Группы</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: #27ae60;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 20px 0;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    input,
+    select {
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #27ae60;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #219653;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th {
+      background: #27ae60;
+      color: white;
+      padding: 12px;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background: #f8fff8;
+    }
+
+    .uzbek {
+      background: #e8f5e8 !important;
+    }
+
+    .import {
+      background: #f0f8ff !important;
+    }
+
+    .generic {
+      background: #fffacd !important;
+      color: #b8860b;
+    }
+
+    .original {
+      background: #e6f3ff !important;
+      color: #0066cc;
+    }
+
+    .stats {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 10px;
+      text-align: center;
+      background: #d4edda;
+      color: #155724;
+    }
+
+    /* Подсказка строго над текстом — красиво и аккуратно */
+    .tooltip {
+      position: relative;
+      cursor: help;
+      display: inline-block;
+    }
+
+    .tooltip .tiptext {
+      visibility: hidden;
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: normal;
+
+      /* Располагаем строго над элементом */
+      position: absolute;
+      bottom: 120%;
+      /* над заголовком */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+    }
+
+    /* Стрелочка вниз */
+    .tooltip .tiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      /* снизу от подсказки */
+      left: 50%;
+      margin-left: -8px;
+      border: 8px solid transparent;
+      border-top-color: #1a1a1a;
+    }
+
+    /* Показываем при наведении */
+    .tooltip:hover .tiptext {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-50%) translateY(-8px);
+      /* лёгкий подъём */
+    }
+
+    /* Если подсказка уходит за левый/правый край — прижимаем */
+    .tooltip .tiptext.left-aligned {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .tooltip .tiptext.right-aligned {
+      left: auto;
+      right: 0;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Лекарства Узбекистана 2025 — Реестр №29 + Тип + Группы</h1>
+  </header>
+  <div class="container">
+
+    <div class="card">
+      <!-- <h2>Загрузите файлы реестра (Excel или JSON)</h2>
+      <input type="file" id="fileInput" multiple accept=".xlsx,.xls,.json,.csv">
+      <button onclick="loadFiles()">ЗАГРУЗИТЬ ФАЙЛЫ</button> -->
+      <div class="stats" id="status">Автозагрузка с GitHub...</div>
+    </div>
+
+    <div class="card">
+      <h2>Поиск и фильтры</h2>
+      <input type="text" id="query"
+        placeholder="Введите здесь МНН или Торговое название припарата: azithromycin, Сумамед, Амлодипин..."
+        oninput="search()">
+      <select id="filterCountry" onchange="search()">
+        <option value="">Все страны</option>
+        <option value="Узбекистан">Только узбекские</option>
+        <option value="Импорт">Только импорт</option>
+      </select>
+      <select id="filterType" onchange="search()">
+        <option value="">Все типы</option>
+        <option value="Генерик">Только генерики</option>
+        <option value="Оригинал">Только оригиналы</option>
+      </select>
+      <select id="filterGroup" onchange="search()">
+        <option value="">Все терапевтические группы</option>
+      </select>
+      <button onclick="exportPDF()">Экспорт в PDF</button>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <span class="tooltip">
+                МНН
+                <span class="tiptext">
+                  Международное непатентованное название (МНН) — это официальное <br> научное название действующего
+                  вещества лекарства
+                  <br><small>(например: paracetamol, амлодипин, азитромицин)</small>
+                </span>
+              </span>
+            </th>
+            <th>
+              <span class="tooltip">
+                Торговое название
+                <span class="tiptext">Бренд, под которым продаётся препарат</span>
+              </span>
+            </th>
+            <th>
+              <span class="tooltip">
+                Производитель / Страна
+                <span class="tiptext">Кто и где произвёл лекарство</span>
+              </span>
+            </th>
+            <th>
+              <span class="tooltip">
+                Форма выпуска
+                <span class="tiptext">Таблетки, капсулы, ампулы, дозировка и т.д.</span>
+              </span>
+            </th>
+            <th>
+              <span class="tooltip">
+                Цена (сум)
+                <span class="tiptext">Ориентировочная цена в аптеках Узбекистана</span>
+              </span>
+            </th>
+            <th>
+              <span class="tooltip">
+                Тип
+                <span class="tiptext">
+                  <strong>Оригинал</strong> — дорогой бренд<br>
+                  <strong>Генерик</strong> — дешёвый аналог
+                </span>
+              </span>
+            </th>
+
+          </tr>
+        </thead>
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    let medsDatabase = [];
+    const originals = ["Сумамед", "Норваск", "Конкор", "Лозап", "Глюкофаж", "Козаар", "Омез", "Лосек", "Роцефин", "Аугментин", "Зиннат", "Клацид", "Фромилид", "Панадол", "Нурофен", "Энап", "Престариум", "Крестор", "Вальсакор", "Диован", "Тритаце"];
+
+    // === АВТОЗАГРУЗКА С GITHUB ===
+    window.addEventListener('load', function () {
+      if (medsDatabase.length > 0) return;
+
+      document.getElementById('status').innerHTML = "Автозагрузка реестра №29 с GitHub...";
+
+      const username = "uz-itlife";
+      const repo = "uzmed";
+      const baseRaw = `https://raw.githubusercontent.com/${username}/${repo}/main/data/`;
+
+      const filesToLoad = [
+        "1. Заруб.лек.ср.xls",
+        "2. Отеч.лек.xls",
+        "popular-2025.json",
+        "turkey-and-kids-2025.json",
+        // "3. Заруб.лек.ср.json",
+        // "4. Отеч.лек.json",
+
+      ];
+
+      let loaded = 0;
+
+      filesToLoad.forEach(fileName => {
+        const url = baseRaw + encodeURIComponent(fileName);
+
+        fetch(url)
+          .then(r => {
+            if (!r.ok) throw new Error("404");
+            return r.blob();
+          })
+          .then(blob => {
+            const file = new File([blob], fileName);
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+              try {
+                const workbook = XLSX.read(e.target.result, {
+                  type: 'binary',
+                  codepage: 1251  // ГЛАВНОЕ: правильная кодировка!
+                });
+
+                workbook.SheetNames.forEach(sheet => {
+                  const rows = XLSX.utils.sheet_to_json(workbook.Sheets[sheet], { defval: "" });
+                  processRows(rows);
+                });
+              } catch (err) {
+                console.error("Ошибка чтения:", fileName, err);
+              }
+
+              if (++loaded === filesToLoad.length) {
+                finishLoading();
+              }
+            };
+
+            reader.readAsBinaryString(file);
+          })
+          .catch(() => {
+            if (++loaded === filesToLoad.length) {
+              document.getElementById('status').innerHTML = "Ошибка загрузки. Загрузите файлы вручную.";
+            }
+          });
+      });
+    });
+
+    function finishLoading() {
+      document.getElementById('status').innerHTML = `<strong>Загружено реестр №29: ${medsDatabase.length} препаратов</strong><br>Добавляем популярные препараты вне реестра...`;
+
+      // Загружаем новый файл с турецкими + детскими (604 реально новых!)
+      fetch('https://raw.githubusercontent.com/uz-itlife/uzmed/main/data/turkey-and-kids-2025.json')
+        .then(r => r.json())
+        .then(extra => {
+          const added = extra.filter(p => !medsDatabase.some(m => m.trade === p.trade && m.form === p.form));
+          added.forEach(p => medsDatabase.push(p));
+          document.getElementById('status').innerHTML = `<strong>ГОТОВО! Всего: ${medsDatabase.length} препаратов</strong><br>
+      Реестр №29: 6796 + Турецкие и детские: ${added.length} новых`;
+          fillGroupFilter(); search();
+        });
+          .then(r => {
+          if (!r.ok) throw new Error("popular-2025.json не найден");
+          return r.json();
+        })
+        .then(extra => {
+          extra.forEach(p => medsDatabase.push(p));
+          document.getElementById('status').innerHTML =
+            `<strong>ГОТОВО! Всего в базе: ${medsDatabase.length} препаратов</strong><br>
+         <small>Реестр №29: ${medsDatabase.length - extra.length} + Популярные вне реестра: ${extra.length}</small>`;
+
+          fillGroupFilter();
+          search();
+        })
+        .catch(err => {
+          console.error(err);
+          document.getElementById('status').innerHTML =
+            `<strong>ГОТОВО! Загружено только реестр: ${medsDatabase.length} препаратов</strong><br>
+         <small style="color:#e67e22">popular-2025.json не найден — добавьте его в /data/</small>`;
+          fillGroupFilter();
+          search();
+        });
+    }
+
+    // === РУЧНАЯ ЗАГРУЗКА ===
+    function loadFiles() {
+      const files = document.getElementById('fileInput').files;
+      if (files.length === 0) return alert("Выберите файл(ы)!");
+      medsDatabase = [];
+      let processed = 0;
+
+      Array.from(files).forEach(file => {
+        const reader = new FileReader();
+        if (file.name.endsWith('.json')) {
+          reader.onload = e => { processJSON(e.target.result); checkDone(++processed, files.length); };
+          reader.readAsText(file);
+        } else {
+          reader.onload = e => {
+            const wb = XLSX.read(e.target.result, { type: 'binary', codepage: 1251 });
+            wb.SheetNames.forEach(sheet => {
+              const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheet], { defval: "" });
+              processRows(rows);
+            });
+            checkDone(++processed, files.length);
+          };
+          reader.readAsBinaryString(file);
+        }
+      });
+    }
+
+    function checkDone(done, total) {
+      document.getElementById('status').innerHTML = `Загружено ${done} из ${total}...`;
+      if (done === total) finishLoading();
+    }
+
+    function processJSON(text) {
+      try { processRows(JSON.parse(text)); } catch (e) { alert("Ошибка JSON"); }
+    }
+
+    function processRows(rows) {
+      rows.forEach(row => {
+        if (!row) return;
+
+        let mnn = "", trade = "", producer = "", country = "", form = "", group = "";
+
+        for (let key in row) {
+          const val = (row[key] || "").toString().trim();
+          const k = key.toLowerCase();
+
+          if (key === "__EMPTY_1") mnn = val;
+          if (key.includes("ЛЕКАРСТВЕННЫЕ СРЕДСТВА") || key.includes("ЗАРУБЕЖНЫХ")) trade = val.replace(/\n/g, " ").split(" (")[0];
+          if (key === "__EMPTY_4" || k.includes("производитель") || k.includes("фирма")) producer = val;
+          if (key === "__EMPTY_3" || k.includes("страна")) country = val;
+          if (key === "__EMPTY_2" || k.includes("форма")) form = val;
+          if (key === "__EMPTY_5" || k.includes("фармакотерапевтическая") || k.includes("группа")) group = val.split(".")[0].trim();
+        }
+
+        if (!mnn && trade) {
+          const match = trade.match(/\(([^)]+)\)/);
+          if (match) mnn = match[1].trim();
+        }
+
+        if (mnn || trade) {
+          const isOriginal = originals.some(o => trade.toUpperCase().includes(o.toUpperCase()));
+          const type = isOriginal ? "Оригинал" : "Генерик";
+          const price = country.includes("Узбекистан") ? "7–35 тыс." : (isOriginal ? "60–250 тыс." : "25–120 тыс.");
+
+          medsDatabase.push({ mnn, trade, producer, country, form, price, type, group: group || "Другие" });
+        }
+      });
+    }
+
+    function fillGroupFilter() {
+      const groups = [...new Set(medsDatabase.map(m => m.group))].filter(Boolean).sort();
+      const select = document.getElementById('filterGroup');
+      select.innerHTML = '<option value="">Все терапевтические группы</option>';
+      groups.forEach(g => {
+        const opt = document.createElement('option');
+        opt.value = g;
+        opt.textContent = g;
+        select.appendChild(opt);
+      });
+    }
+
+    function search() {
+      let list = medsDatabase;
+      const q = document.getElementById('query').value.toLowerCase().trim();
+      const country = document.getElementById('filterCountry').value;
+      const type = document.getElementById('filterType').value;
+      const group = document.getElementById('filterGroup').value;
+
+      if (q) list = list.filter(m =>
+        m.mnn.toLowerCase().includes(q) ||
+        m.trade.toLowerCase().includes(q) ||
+        m.producer.toLowerCase().includes(q) ||
+        m.group.toLowerCase().includes(q)
+      );
+      if (country === "Узбекистан") list = list.filter(m => m.country.includes("Узбекистан"));
+      if (country === "Импорт") list = list.filter(m => !m.country.includes("Узбекистан"));
+      if (type) list = list.filter(m => m.type === type);
+      if (group) list = list.filter(m => m.group === group);
+
+      list.sort((a, b) => a.price.localeCompare(b.price));
+
+      const tbody = document.getElementById('results');
+      tbody.innerHTML = "";
+
+      list.forEach(m => {
+        const tr = document.createElement('tr');
+        tr.className = m.country.includes("Узбекистан") ? "uzbek" : "import";
+        if (m.type === "Генерик") tr.classList.add("generic");
+        if (m.type === "Оригинал") tr.classList.add("original");
+
+        tr.innerHTML = `
+          <td>${m.mnn || "-"}</td>
+          <td><strong>${m.trade || "-"}</strong></td>
+          <td>${m.producer} (${m.country})</td>
+          <td>${m.form}</td>
+          <td>${m.price}</td>
+          <td><strong>${m.type}</strong></td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      if (list.length === 0) {
+        tbody.innerHTML = "<tr><td colspan='6' style='text-align:center;padding:40px;color:#e74c3c'>Ничего не найдено</td></tr>";
+      } else {
+        const total = document.createElement('tr');
+        total.innerHTML = `<td colspan="6" style="background:#27ae60;color:white;text-align:center;font-weight:bold">
+          Найдено: ${list.length} из ${medsDatabase.length} препаратов</td>`;
+        tbody.insertBefore(total, tbody.firstChild);
+      }
+    }
+
+    function exportPDF() {
+      if (medsDatabase.length === 0) return alert("Нет данных для экспорта!");
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF('l', 'mm', 'a4');
+      const margin = 10;
+      let y = 20;
+
+      doc.setFontSize(16);
+      doc.setFont("helvetica", "bold");
+      doc.text("Реестр лекарственных средств Узбекистана №29 (14.11.2025)", margin, y);
+      y += 10;
+
+      const found = document.querySelectorAll('#results tr').length - 1;
+      doc, 并且.setFontSize(11);
+      doc.setFont("helvetica", "normal");
+      doc.text(`Найдено препаратов: ${found}`, margin, y);
+      y += 10;
+
+      const dataRows = Array.from(document.querySelectorAll('#results tr')).slice(1)
+        .map(tr => Array.from(tr.cells).map(td => td.textContent.trim()));
+
+      const columns = [
+        { header: "МНН", width: 28 },
+        { header: "Торговое название", width: 42 },
+        { header: "Производитель / Страна", width: 52 },
+        { header: "Форма выпуска", width: 62 },
+        { header: "Цена (сум)", width: 25 },
+        { header: "Тип", width: 20 }
+      ];
+
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "bold");
+      let x = margin;
+      columns.forEach(col => { doc.text(col.header, x, y); x += col.width; });
+      y += 4;
+      doc.line(margin, y, 287, y);
+      y += 6;
+
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(8.5);
+
+      dataRows.forEach(row => {
+        if (y > 190) {
+          doc.addPage(); y = 20; x = margin;
+          doc.setFont("helvetica", "bold");
+          columns.forEach(col => { doc.text(col.header, x, y); x += col.width; });
+          y += 4; doc.line(margin, y, 287, y); y += 6;
+          doc.setFont("helvetica", "normal");
+        }
+
+        let maxLines = 1;
+        x = margin;
+        columns.forEach((col, i) => {
+          const lines = doc.splitTextToSize(row[i] || "", col.width - 3);
+          doc.text(lines, x, y);
+          maxLines = Math.max(maxLines, lines.length);
+          x += col.width;
+        });
+        y += maxLines * 4.5 + 2;
+      });
+
+      doc.save(`Реестр_Узбекистан_2025_${new Date().toLocaleDateString('ru').replace(/\./g, '-')}.pdf`);
+    }
+
+
+
+    document.querySelectorAll('.tooltip').forEach(th => {
+      th.addEventListener('mouseenter', () => {
+        const tooltip = th.querySelector('::after');
+        setTimeout(() => {
+          const rect = th.getBoundingClientRect();
+          const tip = th.querySelector('::after') || { offsetWidth: 200 };
+          if (rect.left < 100) th.querySelector('::after')?.setAttribute('data-side', 'left');
+          else if (rect.right > window.innerWidth - 100) th.querySelector('::after')?.setAttribute('data-side', 'right');
+          else th.querySelector('::after')?.removeAttribute('data-side');
+        }, 100);
+      });
+    });
+  </script>
+</body>
+
+</html>
