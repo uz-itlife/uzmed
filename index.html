@@ -374,40 +374,46 @@
       });
     }
 
-    function search() {
+   function search() {
       let list = medsDatabase;
-      const q = document.getElementById('query').value.toLowerCase().trim();
-      const country = document.getElementById('filterCountry').value;
-      const type = document.getElementById('filterType').value;
-      const group = document.getElementById('filterGroup').value;
 
-      if (q) list = list.filter(m =>
-        m.mnn.toLowerCase().includes(q) ||
-        m.trade.toLowerCase().includes(q) ||
-        m.producer.toLowerCase().includes(q)
-      );
-      if (country === "Узбекистан") list = list.filter(m => m.country.includes("Узбекистан"));
-      if (country === "Импорт") list = list.filter(m => !m.country.includes("Узбекистан"));
+      const q = document.getElementById('query').value.toLowerCase().trim();
+      const country = document.getValue('filterCountry');
+      const type = getValue('filterType');
+      const group = getValue('filterGroup');
+
+      if (q) {
+        list = list.filter(m => {
+          const searchText = `${m.mnn || ''} ${m.trade || ''} ${m.producer || ''} ${m.group || ''} ${m.country || ''}`.toLowerCase();
+          return searchText.includes(q);
+        });
+      }
+
+      if (country === "Узбекистан") list = list.filter(m => (m.country || "").includes("Узбекистан"));
+      if (country === "Импорт") list = list.filter(m => !(m.country || "").includes("Узбекистан"));
       if (type) list = list.filter(m => m.type === type);
-      if (group) list = list.filter(m => m.group === group);
+      if (group) list = list.filter(m => (m.group || "") === group);
+
+      // Сортировка по цене (если цена есть)
+      list.sort((a, b) => (a.price || "").localeCompare(b.price || ""));
 
       const tbody = document.getElementById('results');
       tbody.innerHTML = "";
 
       list.forEach(m => {
         const tr = document.createElement('tr');
-        tr.className = m.country.includes("Узбекистан") ? "uzbek" : "import";
+        tr.className = (m.country || "").includes("Узбекистан") ? "uzbek" : "import";
         if (m.type === "Генерик") tr.classList.add("generic");
         if (m.type === "Оригинал") tr.classList.add("original");
 
         tr.innerHTML = `
-          <td>${m.mnn || "-"}</td>
-          <td><strong>${m.trade || "-"}</strong></td>
-          <td>${m.producer} (${m.country})</td>
-          <td>${m.form}</td>
-          <td>${m.price}</td>
-          <td><strong>${m.type}</strong></td>
-        `;
+      <td>${m.mnn || "-"}</td>
+      <td><strong>${m.trade || "-"}</strong></td>
+      <td>${m.producer || "-"} (${m.country || "-"})</td>
+      <td>${m.form || "-"}</td>
+      <td>${m.price || "-"}</td>
+      <td><strong>${m.type || "-"}</strong></td>
+    `;
         tbody.appendChild(tr);
       });
 
@@ -416,7 +422,7 @@
       } else {
         const total = document.createElement('tr');
         total.innerHTML = `<td colspan="6" style="background:#27ae60;color:white;text-align:center;font-weight:bold">
-          Найдено: ${list.length} из ${medsDatabase.length} препаратов</td>`;
+      Найдено: ${list.length} из ${medsDatabase.length} препаратов</td>`;
         tbody.insertBefore(total, tbody.firstChild);
       }
     }
