@@ -1,0 +1,342 @@
+[
+  {
+    "mnn": "Paracetamol",
+    "trade": "Панадол",
+    "producer": "GSK",
+    "country": "Великобритания",
+    "form": "таб. 500мг №12",
+    "price": "15 000 - 20 000",
+    "type": "Оригинал",
+    "group": "Обезболивающие"
+  },
+  {
+    "mnn": "Ibuprofen",
+    "trade": "Нурофен",
+    "producer": "Reckitt Benckiser",
+    "country": "Великобритания",
+    "form": "таб. 400мг №10",
+    "price": "10 000 - 15 000",
+    "type": "Оригинал",
+    "group": "Обезболивающие"
+  },
+  {
+    "mnn": "Omeprazole",
+    "trade": "Омез",
+    "producer": "Dr. Reddy's",
+    "country": "Индия",
+    "form": "капс. 20мг №30",
+    "price": "5 000 - 8 000",
+    "type": "Генерик",
+    "group": "Желудочно-кишечные"
+  },
+  {
+    "mnn": "Loratadine",
+    "trade": "Кларитин",
+    "producer": "Bayer",
+    "country": "Германия",
+    "form": "таб. 10мг №10",
+    "price": "45 000 - 65 000",
+    "type": "Оригинал",
+    "group": "Антигистаминные"
+  },
+  {
+    "mnn": "Sildenafil",
+    "trade": "Виагра",
+    "producer": "Pfizer",
+    "country": "США",
+    "form": "таб. 50мг №4",
+    "price": "150 000 - 200 000",
+    "type": "Оригинал",
+    "group": "Эректильная дисфункция"
+  },
+  {
+    "mnn": "Vitamin D3",
+    "trade": "Вигантол",
+    "producer": "Merck",
+    "country": "Германия",
+    "form": "капли 10мл",
+    "price": "80 000 - 120 000",
+    "type": "Оригинал",
+    "group": "Витамины"
+  },
+  {
+    "mnn": "Magnesium + B6",
+    "trade": "Магне В6",
+    "producer": "Sanofi",
+    "country": "Франция",
+    "form": "таб. №50",
+    "price": "45 000 - 60 000",
+    "type": "Оригинал",
+    "group": "Витамины"
+  },
+  {
+    "mnn": "Multivitamins",
+    "trade": "Супрадин",
+    "producer": "Bayer",
+    "country": "Швейцария",
+    "form": "таб. №30",
+    "price": "55 000 - 75 000",
+    "type": "Оригинал",
+    "group": "Витамины"
+  },
+  {
+    "mnn": "Omega-3",
+    "trade": "Омега-3",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 1000мг №100",
+    "price": "120 000 - 160 000",
+    "type": "БАД",
+    "group": "Витамины"
+  },
+  {
+    "mnn": "Collagen",
+    "trade": "Коллаген",
+    "producer": "Solgar",
+    "country": "США",
+    "form": "капс. №90",
+    "price": "150 000 - 200 000",
+    "type": "БАД",
+    "group": "Красота"
+  },
+  {
+    "mnn": "Hyaluronic acid",
+    "trade": "Гиалуроновая кислота",
+    "producer": "Solgar",
+    "country": "США",
+    "form": "капс. №60",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Красота"
+  },
+  {
+    "mnn": "L-Carnitine",
+    "trade": "L-карнитин",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "таб. 500мг №60",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Похудение"
+  },
+  {
+    "mnn": "Green Tea Extract",
+    "trade": "Экстракт зелёного чая",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 400мг №100",
+    "price": "50 000 - 70 000",
+    "type": "БАД",
+    "group": "Похудение"
+  },
+  {
+    "mnn": "Probiotics",
+    "trade": "Пробиотики",
+    "producer": "BioGaia",
+    "country": "Швеция",
+    "form": "таб. №30",
+    "price": "90 000 - 120 000",
+    "type": "БАД",
+    "group": "Кишечник"
+  },
+  {
+    "mnn": "Coenzyme Q10",
+    "trade": "Коэнзим Q10",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 100мг №60",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Сердце"
+  },
+  {
+    "mnn": "Ginkgo Biloba",
+    "trade": "Гинкго Билоба",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 120мг №100",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Мозг"
+  },
+  {
+    "mnn": "Melatonin",
+    "trade": "Мелатонин",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "таб. 3мг №180",
+    "price": "70 000 - 100 000",
+    "type": "БАД",
+    "group": "Сон"
+  },
+  {
+    "mnn": "Curcumin",
+    "trade": "Куркумин",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 665мг №60",
+    "price": "90 000 - 120 000",
+    "type": "БАД",
+    "group": "Антиоксиданты"
+  },
+  {
+    "mnn": "Resveratrol",
+    "trade": "Ресвератрол",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 200мг №60",
+    "price": "110 000 - 150 000",
+    "type": "БАД",
+    "group": "Антиоксиданты"
+  },
+  {
+    "mnn": "Turmeric",
+    "trade": "Куркума",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 665мг №60",
+    "price": "60 000 - 80 000",
+    "type": "БАД",
+    "group": "Антиоксиданты"
+  },
+  {
+    "mnn": "Ginseng",
+    "trade": "Женьшень",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 500мг №100",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Энергия"
+  },
+  {
+    "mnn": "Rhodiola Rosea",
+    "trade": "Родиола розовая",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 500мг №60",
+    "price": "70 000 - 95 000",
+    "type": "БАД",
+    "group": "Энергия"
+  },
+  {
+    "mnn": "Guarana",
+    "trade": "Гуарана",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 800мг №90",
+    "price": "60 000 - 80 000",
+    "type": "БАД",
+    "group": "Энергия"
+  },
+  {
+    "mnn": "Caffeine",
+    "trade": "Кофеин",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "таб. 200мг №100",
+    "price": "40 000 - 60 000",
+    "type": "БАД",
+    "group": "Энергия"
+  },
+  {
+    "mnn": "Tribulus Terrestris",
+    "trade": "Трибулус",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 1000мг №90",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Тестостерон"
+  },
+  {
+    "mnn": "Fenugreek",
+    "trade": "Пажитник",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 500мг №100",
+    "price": "50 000 - 70 000",
+    "type": "БАД",
+    "group": "Тестостерон"
+  },
+  {
+    "mnn": "ZMA",
+    "trade": "ZMA",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. №90",
+    "price": "70 000 - 95 000",
+    "type": "БАД",
+    "group": "Тестостерон"
+  },
+  {
+    "mnn": "DHEA",
+    "trade": "ДГЭА",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "таб. 25мг №60",
+    "price": "90 000 - 120 000",
+    "type": "БАД",
+    "group": "Гормоны"
+  },
+  {
+    "mnn": "Pregnenolone",
+    "trade": "Прогенолон",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 50мг №100",
+    "price": "100 000 - 140 000",
+    "type": "БАД",
+    "group": "Гормоны"
+  },
+  {
+    "mnn": "Prostate Support",
+    "trade": "Простата",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. №90",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Мужское здоровье"
+  },
+  {
+    "mnn": "Saw Palmetto",
+    "trade": "Пальма сабал",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 320мг №90",
+    "price": "70 000 - 95 000",
+    "type": "БАД",
+    "group": "Мужское здоровье"
+  },
+  {
+    "mnn": "Evening Primrose Oil",
+    "trade": "Масло примулы вечерней",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 1000мг №90",
+    "price": "60 000 - 80 000",
+    "type": "БАД",
+    "group": "Женское здоровье"
+  },
+  {
+    "mnn": "Vitex",
+    "trade": "Витекс",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 400мг №90",
+    "price": "70 000 - 95 000",
+    "type": "БАД",
+    "group": "Женское здоровье"
+  },
+  {
+    "mnn": "Black Cohosh",
+    "trade": "Клопогон",
+    "producer": "Now Foods",
+    "country": "США",
+    "form": "капс. 500мг №90",
+    "price": "80 000 - 110 000",
+    "type": "БАД",
+    "group": "Женское здоровье"
+  }
+]

@@ -119,6 +119,65 @@
       background: #d4edda;
       color: #155724;
     }
+
+  /* Подсказка строго над текстом — красиво и аккуратно */
+.tooltip {
+  position: relative;
+  cursor: help;
+  display: inline-block;
+}
+
+.tooltip .tiptext {
+  visibility: hidden;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: normal;
+
+  /* Располагаем строго над элементом */
+  position: absolute;
+  bottom: 120%;                    /* над заголовком */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+/* Стрелочка вниз */
+.tooltip .tiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;                       /* снизу от подсказки */
+  left: 50%;
+  margin-left: -8px;
+  border: 8px solid transparent;
+  border-top-color: #1a1a1a;
+}
+
+/* Показываем при наведении */
+.tooltip:hover .tiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-8px);  /* лёгкий подъём */
+}
+
+/* Если подсказка уходит за левый/правый край — прижимаем */
+.tooltip .tiptext.left-aligned {
+  left: 0;
+  transform: translateX(0);
+}
+.tooltip .tiptext.right-aligned {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
   </style>
 </head>
 
@@ -129,15 +188,15 @@
   <div class="container">
 
     <div class="card">
-      <h2>Загрузите файлы реестра (Excel или JSON)</h2>
+      <!-- <h2>Загрузите файлы реестра (Excel или JSON)</h2>
       <input type="file" id="fileInput" multiple accept=".xlsx,.xls,.json,.csv">
-      <button onclick="loadFiles()">ЗАГРУЗИТЬ ФАЙЛЫ</button>
+      <button onclick="loadFiles()">ЗАГРУЗИТЬ ФАЙЛЫ</button> -->
       <div class="stats" id="status">Автозагрузка с GitHub...</div>
     </div>
 
     <div class="card">
       <h2>Поиск и фильтры</h2>
-      <input type="text" id="query" placeholder="Азитромицин, Сумамед, Амлодипин..." oninput="search()">
+      <input type="text" id="query" placeholder="Введите здесь МНН или Торговое название припарата: azithromycin, Сумамед, Амлодипин..." oninput="search()">
       <select id="filterCountry" onchange="search()">
         <option value="">Все страны</option>
         <option value="Узбекистан">Только узбекские</option>
@@ -158,12 +217,49 @@
       <table>
         <thead>
           <tr>
-            <th>МНН</th>
-            <th>Торговое название</th>
-            <th>Производитель / Страна</th>
-            <th>Форма выпуска</th>
-            <th>Цена (сум)</th>
-            <th>Тип</th>
+        <th>
+          <span class="tooltip">
+            МНН
+            <span class="tiptext">
+              Международное непатентованное название (МНН) — это официальное <br> научное название действующего вещества лекарства
+              <br><small>(например: paracetamol, амлодипин, азитромицин)</small>
+            </span>
+          </span>
+        </th>
+        <th>
+          <span class="tooltip">
+            Торговое название
+            <span class="tiptext">Бренд, под которым продаётся препарат</span>
+          </span>
+        </th>
+        <th>
+          <span class="tooltip">
+            Производитель / Страна
+            <span class="tiptext">Кто и где произвёл лекарство</span>
+          </span>
+        </th>
+        <th>
+          <span class="tooltip">
+            Форма выпуска
+            <span class="tiptext">Таблетки, капсулы, ампулы, дозировка и т.д.</span>
+          </span>
+        </th>
+        <th>
+          <span class="tooltip">
+            Цена (сум)
+            <span class="tiptext">Ориентировочная цена в аптеках Узбекистана</span>
+          </span>
+        </th>
+        <th>
+          <span class="tooltip">
+            Тип
+            <span class="tiptext">
+              <strong>Оригинал</strong> — дорогой бренд<br>
+              <strong>Генерик</strong> — дешёвый аналог
+            </span>
+          </span>
+        </th>
+       
           </tr>
         </thead>
         <tbody id="results"></tbody>
@@ -238,10 +334,32 @@
     });
 
     function finishLoading() {
-      document.getElementById('status').innerHTML = `<strong>ГОТОВО! Загружено ${medsDatabase.length} препаратов</strong>`;
-      fillGroupFilter();
-      search();
-    }
+        document.getElementById('status').innerHTML = `<strong>Загружено реестр №29: ${medsDatabase.length} препаратов</strong><br>Добавляем популярные препараты вне реестра...`;
+
+        // === ДОБАВЛЯЕМ ПОПУЛЯРНЫЕ ПРЕПАРАТЫ ВНЕ РЕЕСТРА ===
+        fetch('https://raw.githubusercontent.com/uz-itlife/uzmed/main/data/popular-2025.json')
+          .then(r => {
+            if (!r.ok) throw new Error("popular-2025.json не найден");
+            return r.json();
+          })
+          .then(extra => {
+            extra.forEach(p => medsDatabase.push(p));
+            document.getElementById('status').innerHTML =
+              `<strong>ГОТОВО! Всего в базе: ${medsDatabase.length} препаратов</strong><br>
+         <small>Реестр №29: ${medsDatabase.length - extra.length} + Популярные вне реестра: ${extra.length}</small>`;
+
+            fillGroupFilter();
+            search();
+          })
+          .catch(err => {
+            console.error(err);
+            document.getElementById('status').innerHTML =
+              `<strong>ГОТОВО! Загружено только реестр: ${medsDatabase.length} препаратов</strong><br>
+         <small style="color:#e67e22">popular-2025.json не найден — добавьте его в /data/</small>`;
+            fillGroupFilter();
+            search();
+          });
+      }
 
     // === РУЧНАЯ ЗАГРУЗКА ===
     function loadFiles() {
@@ -436,6 +554,21 @@
 
       doc.save(`Реестр_Узбекистан_2025_${new Date().toLocaleDateString('ru').replace(/\./g, '-')}.pdf`);
     }
+
+
+
+    document.querySelectorAll('.tooltip').forEach(th => {
+        th.addEventListener('mouseenter', () => {
+          const tooltip = th.querySelector('::after');
+          setTimeout(() => {
+            const rect = th.getBoundingClientRect();
+            const tip = th.querySelector('::after') || { offsetWidth: 200 };
+            if (rect.left < 100) th.querySelector('::after')?.setAttribute('data-side', 'left');
+            else if (rect.right > window.innerWidth - 100) th.querySelector('::after')?.setAttribute('data-side', 'right');
+            else th.querySelector('::after')?.removeAttribute('data-side');
+          }, 100);
+        });
+      });
   </script>
 </body>
 

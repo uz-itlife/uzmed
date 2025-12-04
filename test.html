@@ -1901,3 +1901,10 @@
 </body>
 
 </html>
+
+
+function finishLoading() {
+document.getElementById('status').innerHTML = `<strong>ГОТОВО! Загружено ${medsDatabase.length} препаратов</strong>`;
+fillGroupFilter();
+search();
+}
